@@ -1,2 +1,18 @@
-<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row align-items-start">
+        <div class="col">
+            <div class="container" id="container1">
+                <img class="inmobiliaria" [src]="inmobiliaria" alt="Logo Inmobiliaria">
+            </div>
+        </div>
+        <div class="col">
+            <app-navbar></app-navbar>
+            <div class="container" id="container2">
+                <h1>About APP</h1>
+                <p>App para la prueba tecnica de la empresa JAH Insurance, La app consiste en la creación de una pagina web donde muestra apartamentos añadidos en una base de datos de mysql y creada apartir de una API en NodeJS y Express.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
 <app-footer></app-footer>
