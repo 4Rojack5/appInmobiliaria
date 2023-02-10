@@ -1,1 +1,21 @@
-<p>home works!</p>
+<h1 class="text-center">Encuentra o Añade tu Inmueble</h1>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="col" *ngFor="let Inmueble of ListInmueble">
+<div class="card" (click)="modify(Inmueble.id_propiedad)">
+    <img [src]="Inmueble.imagen" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">{{ Inmueble.valor_propiedad | currency:'COP':'symbol' }}</h5>
+    <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">Area Total: {{ Inmueble.areatotal }}</li>
+    <li class="list-group-item">Cuartos: {{ Inmueble.ncuartos }}</li>
+    <li class="list-group-item">Baños: {{ Inmueble.nbanos }}</li>
+    <li class="list-group-item">Parqueaderos: {{ Inmueble.nparqueaderos }}</li>
+    </ul>
+    <div class="card-body align-self-center">
+    <a (click)="delete(Inmueble.id_propiedad)" class="btn btn-danger"><i class="fa-sharp fa-regular fa-trash"></i></a>
+    </div>
+</div>
+</div>
+</div>
