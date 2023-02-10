@@ -5,6 +5,8 @@ import { EditComponent } from './views/edit/edit.component';
 import { HomeComponent } from './views/home/home.component';
 import { SearchComponent } from './views/search/search.component';
 
+//Todas la rutas creadas
+
 const routes: Routes = [
   {
     path: '', 
@@ -26,7 +28,11 @@ const routes: Routes = [
   {
     path: 'edit/:id',
     component: EditComponent
-  }
+  },
+  { 
+    path: '**', 
+    redirectTo: '/home', pathMatch: 'full', 
+  },
 ];
 
 @NgModule({

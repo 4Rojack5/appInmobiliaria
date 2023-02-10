@@ -1,10 +1,14 @@
+<!-- Aqui se muestran los inmuebles añadidos y editados -->
 <div class="container">
 <h1 class="text-center text-light"><i class="fa-solid fa-building"></i> Encuentra tu Inmueble <i class="fa-solid fa-building"></i></h1>
 <div class="row row-cols-1 row-cols-md-2 g-4">
+<!-- Se utiliza ngFor para traer todos los datos de la DB y se utiliza la interpolación para mostrar cada dato -->
 <div class="col" *ngFor="let Inmueble of ListInmueble">
+    <!-- botón con metodo click que cuando se da click en cualquier lado de la card se podrá editar -->
 <div class="card" (click)="modify(Inmueble.id_propiedad)">
     <img [src]="Inmueble.imagen" class="card-img-top" alt="...">
     <div class="card-body">
+        <!-- Se utiliza un pipe para convertir el dato del precio en COP -->
     <h5 class="card-title text-center fs-3">{{ Inmueble.valor_propiedad | currency:'COP':'symbol' }} <img src="../../../assets/pictures/colombia.png" class="card-img-top" alt="colombia" class="colombia"></h5>
     <p class="card-text"></p>
     </div>
@@ -15,9 +19,12 @@
     <li class="list-group-item"><i class="fa-solid fa-warehouse"></i> Parqueaderos: {{ Inmueble.nparqueaderos }}</li>
     </ul>
     <div class="card-body align-self-center">
+        <!-- Botón para eliminar el inmueble -->
     <a (click)="delete(Inmueble.id_propiedad)" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
     </div>
 </div>
 </div>
 </div>
 </div>
+
+<!-- Created By: Juan Felipe Rodríguez Rendón -->

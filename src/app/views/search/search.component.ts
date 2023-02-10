@@ -11,15 +11,20 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
+  //Se crea una array para almacenar los datos
+
   ListInmueble: Inmobiliario[] | any;
 
+  //En el constructor se declaran los servicios importados
   constructor(private InmobiliarioService: InmobiliarioService,
               private router:Router) { }
 
+  //ngOnInit para que al iniciar la app muestre los inmuebles (Ciclos de vida)           
   ngOnInit(): void {
     this.showInmobiliario();
   }
 
+  //Función para mostrar el mobiliario
   showInmobiliario(){
     this.InmobiliarioService.getInmobiliarios().subscribe(
       res => {
@@ -30,6 +35,7 @@ export class SearchComponent implements OnInit {
       );
   }
 
+  //Función para eliminar un inmueble por id
   delete(id:string){
     this.InmobiliarioService.deleteInmobiliario(id).subscribe(
       res => {
@@ -40,8 +46,11 @@ export class SearchComponent implements OnInit {
       );
   }
 
+  //Función para redireccionar al formulario de modificación
   modify(id:string){
     this.router.navigate(['/edit/'+id]);
   }
 
 }
+
+/* Created By: Juan Felipe Rodríguez Rendón */

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  //Datos para hacer binding al component.html
+
   inmobiliaria = '../../../assets/pictures/Inmobiliaria.png';
   aptoc1 = '../../../assets/pictures/aptoc1.jpg';
 
@@ -15,3 +17,5 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+
+/* Created By: Juan Felipe Rodríguez Rendón */

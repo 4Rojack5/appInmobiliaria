@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class AddComponent implements OnInit {
 
+  //Se crea una array pero esta vez vacia con cada elemento la tabla
+
   inmueble: Inmobiliario = {
     id_propiedad: '',
     imagen: '',
@@ -20,12 +22,14 @@ export class AddComponent implements OnInit {
     valor_propiedad: ''
   };
 
+  //Se declaran en el constructor los servicios
   constructor(private InmobiliarioService: InmobiliarioService,
               private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  //Se crea la función add para poder añadir un inmueble
   add(){
     delete this.inmueble.id_propiedad;
     this.InmobiliarioService.addInmobiliario(this.inmueble).subscribe();
@@ -33,3 +37,5 @@ export class AddComponent implements OnInit {
   }
 
 }
+
+/* Created By: Juan Felipe Rodríguez Rendón */

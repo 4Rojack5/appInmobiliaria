@@ -7,6 +7,7 @@ import { Inmobiliario } from '../interfaces/inmobiliario';
 })
 export class InmobiliarioService {
 
+  //Se agrega el url del localhost de la api
   url = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) { }
@@ -36,3 +37,5 @@ export class InmobiliarioService {
     return this.http.put(this.url+'/'+id, inmobiliario);
   }
 }
+
+/* Created By: Juan Felipe Rodríguez Rendón */

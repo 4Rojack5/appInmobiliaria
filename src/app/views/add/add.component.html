@@ -1,40 +1,44 @@
+<!-- Se añade un pequeño formulario para añadir un Inmueble -->
 <div class="container text-light">
     <h1 class="titulo">Agregar Inmobiliario para Promocionarlo!</h1>
 <form action="">
     <div class="row">
     <div class="col-sm-6">
+        <!-- Se utiliza ngModel para enviar el valor digitado a la DB -->
         <div class="mb-3">
             <label for="" class="form-label">Imagen del Inmueble</label>
-            <input [(ngModel)]="inmueble.imagen"  type="text" class="form-control" name="imagen">
+            <input [(ngModel)]="inmueble.imagen"  type="text" class="form-control" name="imagen" placeholder="Añade un link de una imagen de google" required>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Valor del Inmueble</label>
-            <input [(ngModel)]="inmueble.valor_propiedad"  type="text" class="form-control" name="valor_propiedad">
+            <input [(ngModel)]="inmueble.valor_propiedad"  type="number" class="form-control" name="valor_propiedad" placeholder="En pesos Colombianos" required>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Area del Inmueble (m²)</label>
-            <input [(ngModel)]="inmueble.areatotal"  type="text" class="form-control" name="areatotal">
+            <input [(ngModel)]="inmueble.areatotal"  type="number" class="form-control" name="areatotal" placeholder="En metros Cuadrados" required>
         </div>
     </div>
     <div class="col-sm-6">
         <div class="mb-3">
             <label for="" class="form-label">Numero de Cuartos del Inmueble</label>
-            <input [(ngModel)]="inmueble.ncuartos"  type="text" class="form-control" name="areatotal">
+            <input [(ngModel)]="inmueble.ncuartos"  type="number" class="form-control" name="ncuartos" required>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Numero de Baños del Inmueble</label>
-            <input [(ngModel)]="inmueble.nbanos"  type="text" class="form-control" name="areatotal">
+            <input [(ngModel)]="inmueble.nbanos"  type="number" class="form-control" name="nbanos" required>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Numero de Parqueaderos del Inmueble</label>
-            <input [(ngModel)]="inmueble.nparqueaderos"  type="text" class="form-control" name="areatotal">
+            <input [(ngModel)]="inmueble.nparqueaderos"  type="number" class="form-control" name="nparqueaderos" required>
         </div>
         <div class="mb-3">
             <div class="row">
                 <div class="col">
+                    <!-- Botón con metodo click y funcion add creada en el add.component.ts -->
                     <button (click)="add()" class="btn btn-success"><i class="fa-solid fa-plus"></i> Añadir Inmueble</button>
                 </div>
                 <div class="col">
+                    <!-- Botón con routerLink para volver a la pagina de buscar inmueble -->
                     <button routerLink="/search" class="btn btn-danger"><i class="fa-solid fa-left-long"></i> Volver</button>
                 </div>
             </div>
@@ -43,3 +47,5 @@
     </div>
 </form>
 </div>
+
+<!-- Created By: Juan Felipe Rodríguez Rendón -->

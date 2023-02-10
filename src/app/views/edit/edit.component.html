@@ -1,37 +1,40 @@
+<!-- Un pequeño formulario para editar un inmueble -->
 <div class="container text-light">
     <h1 class="titulo">Editar el Inmobiliario!</h1>
 <form action="">
     <div class="row">
     <div class="col-sm-6">
+        <!-- Se utiliza ngModel para actualizar los datos que van al edit.component.ts -->
         <div class="mb-3">
             <label for="" class="form-label">Imagen del Inmueble</label>
             <input [(ngModel)]="inmueble.imagen"  type="text" class="form-control" name="imagen">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Valor del Inmueble</label>
-            <input [(ngModel)]="inmueble.valor_propiedad"  type="text" class="form-control" name="valor_propiedad">
+            <input [(ngModel)]="inmueble.valor_propiedad"  type="number" class="form-control" name="valor_propiedad">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Area del Inmueble (m²)</label>
-            <input [(ngModel)]="inmueble.areatotal"  type="text" class="form-control" name="areatotal">
+            <input [(ngModel)]="inmueble.areatotal"  type="number" class="form-control" name="areatotal">
         </div>
     </div>
     <div class="col-sm-6">
         <div class="mb-3">
             <label for="" class="form-label">Numero de Cuartos del Inmueble</label>
-            <input [(ngModel)]="inmueble.ncuartos"  type="text" class="form-control" name="ncuartos">
+            <input [(ngModel)]="inmueble.ncuartos"  type="number" class="form-control" name="ncuartos">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Numero de Baños del Inmueble</label>
-            <input [(ngModel)]="inmueble.nbanos"  type="text" class="form-control" name="nbanos">
+            <input [(ngModel)]="inmueble.nbanos"  type="number" class="form-control" name="nbanos">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Numero de Parqueaderos del Inmueble</label>
-            <input [(ngModel)]="inmueble.nparqueaderos"  type="text" class="form-control" name="nparqueaderos">
+            <input [(ngModel)]="inmueble.nparqueaderos"  type="number" class="form-control" name="nparqueaderos">
         </div>
         <div class="mb-3">
             <div class="row">
                 <div class="col">
+                    <!-- Botón creado con metodo click y función edit que se encuentra en component.ts -->
                     <button (click)="edit()" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i> Guardar Inmueble</button>
                 </div>
                 <div class="col">
@@ -43,3 +46,5 @@
     </div>
 </form>
 </div>
+
+<!-- Created By: Juan Felipe Rodríguez Rendón -->
