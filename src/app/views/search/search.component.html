@@ -1,0 +1,23 @@
+<div class="container">
+<h1 class="text-center text-light"><i class="fa-solid fa-building"></i> Encuentra tu Inmueble <i class="fa-solid fa-building"></i></h1>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="col" *ngFor="let Inmueble of ListInmueble">
+<div class="card" (click)="modify(Inmueble.id_propiedad)">
+    <img [src]="Inmueble.imagen" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title text-center fs-3">{{ Inmueble.valor_propiedad | currency:'COP':'symbol' }} <img src="../../../assets/pictures/colombia.png" class="card-img-top" alt="colombia" class="colombia"></h5>
+    <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item fs-4"><i class="fa-solid fa-chart-area"></i> Area Total: {{ Inmueble.areatotal }} m²</li>
+    <li class="list-group-item"><i class="fa-sharp fa-solid fa-person-shelter"></i> Cuartos: {{ Inmueble.ncuartos }}</li>
+    <li class="list-group-item"><i class="fa-solid fa-toilet"></i> Baños: {{ Inmueble.nbanos }}</li>
+    <li class="list-group-item"><i class="fa-solid fa-warehouse"></i> Parqueaderos: {{ Inmueble.nparqueaderos }}</li>
+    </ul>
+    <div class="card-body align-self-center">
+    <a (click)="delete(Inmueble.id_propiedad)" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+    </div>
+</div>
+</div>
+</div>
+</div>

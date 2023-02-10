@@ -49,7 +49,7 @@ export class EditComponent implements OnInit {
       err => console.log(err)
     );
 
-      this.router.navigate(['/home']);
+      this.router.navigate(['/search']);
 
   }
 

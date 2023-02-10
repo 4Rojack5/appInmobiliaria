@@ -10,6 +10,7 @@ import { FooterComponent } from './templates/footer/footer.component';
 import { AddComponent } from './views/add/add.component';
 import { EditComponent } from './views/edit/edit.component';
 import { HomeComponent } from './views/home/home.component';
+import { SearchComponent } from './views/search/search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './views/home/home.component';
     FooterComponent,
     AddComponent,
     EditComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

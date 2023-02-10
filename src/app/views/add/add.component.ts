@@ -29,7 +29,7 @@ export class AddComponent implements OnInit {
   add(){
     delete this.inmueble.id_propiedad;
     this.InmobiliarioService.addInmobiliario(this.inmueble).subscribe();
-    this.router.navigate(['/home']);
+    this.router.navigate(['/search']);
   }
 
 }

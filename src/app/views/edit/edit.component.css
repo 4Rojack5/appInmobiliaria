@@ -1,0 +1,15 @@
+.container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.titulo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+label{
+    font-size: 25px;
+}
+.btn{
+    max-width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

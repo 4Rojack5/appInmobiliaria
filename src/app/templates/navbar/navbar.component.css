@@ -6,3 +6,15 @@
     width: 200px;
     height: 100px;
 }
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+a:hover {
+    color: #000000 !important;
+    cursor: pointer !important;
+}
+button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
