@@ -18,6 +18,14 @@ Cuenta con una carpeta de assets donde se guardaron todas las img, jpg, png.
 
 Y para finalizar se crearon dos carpetas adicionales que son interfaces y services, la interface cuenta con una plantilla de los datos de la DB, y los services cuentan cuentan con los metodos/funciones para poder manejar todos los metodos del crud put, get, delete y post.
 
+El backend está diseñado con NodeJS, Express y DB MySQL, para iniciar el server primero se debe iniciar xampp para activar mysql y despues con npm run dev se iniciaran ya todo los servicios, se instalo nodemon para el server, la api contiene tres archivos fundamentales que son index.js, routes.js, y en la carpeta config conexion.js.
+
+El index.js contiene todos el cuerpo de la api y todos los permisos de cors que son necesarios para tratar datos.
+El routes.js contiene todas las interacciones de crud entre la base de datos y el archivo.
+El conexion.js contiene la conexion a la DB y con el framework Express.
+
+La carpeta inmobiliariaDB traer el archivo para crear la DB en MySQL.
+
 Muchas gracias y espero que la prueba sea de su agrado.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
